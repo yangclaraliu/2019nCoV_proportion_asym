@@ -55,7 +55,7 @@ for(i in 1:n){
   random[i] <- tmp_2 #if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
 }
 #(which(random == "pre-symptomatic") %>% length)/n
-quantile(random, c(0.25, 0.75))
+quantile(random, c(0.025, 0.975))
 
 correlated <- rep(NA,n)
 for(i in 1:n){
