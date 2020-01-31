@@ -51,28 +51,17 @@ n = 10000
 random <- rep(NA,n)
 for(i in 1:n){
   tmp_1 <- sample(serial_sample,1)
-  tmp_2 <- sample(incubation_sample,1)
-  random[i] <- if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
+  tmp_2 <- length(which(incubation_sample > tmp_1))/length(incubation_sample)
+  random[i] <- tmp_2 #if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
 }
-(which(random == "pre-symptomatic") %>% length)/n
+#(which(random == "pre-symptomatic") %>% length)/n
+quantile(random, c(0.25, 0.75))
 
 correlated <- rep(NA,n)
-a <- sort(sample(serial_sample, n,replace = T)) %>% as.numeric
-b <- sort(sample(incubation_sample, n,replace = T)) %>% as.numeric
 for(i in 1:n){
-  tmp_1 <- a[i]
-  tmp_2 <- b[i]
-  correlated[i] <- if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
+  tmp_1 <- sort(sample(serial_sample, 10000,replace = T))
+  #tmp_2 <- sort(incubation_sample)[1]
+  correlated[i] <- length(which(incubation_sample > tmp_1))/length(incubation_sample)
+    #if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
 }
 (which(correlated == "pre-symptomatic") %>% length)/n
-
-anticorrelated <- rep(NA,n)
-a <- sort(sample(serial_sample, n,replace = T))
-b <- sort((as.numeric(sample(incubation_sample, n,replace = T))))
-b <- rev(as.numeric(b))
-for(i in 1:n){
-  tmp_1 <- a[i]
-  tmp_2 <- b[i]
-  anticorrelated[i] <- if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
-}
-(which(anticorrelated == "pre-symptomatic") %>% length)/n
