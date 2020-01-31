@@ -50,7 +50,7 @@ quantile(serial_sample, c(0.025, 0.95))
 n = 10000
 random <- rep(NA,n)
 for(i in 1:n){
-  tmp_1 <- sample(serial_sample,1)
+  tmp_1 <- sample(serial_sample, length(incubation_sample))
   tmp_2 <- length(which(incubation_sample > tmp_1))/length(incubation_sample)
   random[i] <- tmp_2 #if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
 }
