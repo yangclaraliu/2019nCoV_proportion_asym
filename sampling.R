@@ -1,5 +1,5 @@
 library(tidyverse)
-setwd("C:/Users/eideyliu/Desktop")
+#setwd("C:/Users/eideyliu/Desktop")
 ### generate incubation sample
 incubation <- read.csv("nCoV_Incubation.csv")
 incubation <- rbind(incubation,c(0,0)) %>% arrange(x) %>% mutate(x = round(x,1))
@@ -11,7 +11,8 @@ seq(0,21,by = 0.1) %>%
   mutate(Curve2 = imputeTS::na_interpolation(Curve1),
          tot = sum(Curve2),
          prop = Curve2/tot,
-         n = round(prop*10000)) -> incubation_freq
+         n = round(prop*10000)) %>%
+  mutate(revcum = 1 - (cumsum(Curve2)/sum(Curve2))) -> incubation_freq
 incubation_sample <- list()
 for(i in 1:nrow(incubation_freq)){
   incubation_sample[[i]] <- rep(incubation_freq$value[i], incubation_freq$n[i])
@@ -22,6 +23,8 @@ incubation_sample %<>% unlist
 hist(incubation_sample)
 mean(incubation_sample)
 quantile(incubation_sample, c(0.025, 0.95))
+
+incubation_sample
 
 ####generate serial interval sample
 serial <- read.csv("nCoV_Serial.csv")
@@ -46,20 +49,20 @@ density(serial_sample, bw = 0.2) %>% plot
 mean(serial_sample)
 quantile(serial_sample, c(0.025, 0.95))
 
-###sampling
-n = 10000
-random <- rep(NA,n)
-for(i in 1:n){
-  tmp_1 <- sample(serial_sample,1)
-  tmp_2 <- sample(incubation_sample,1)
-  random[i] <- if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
-}
-(which(random == "pre-symptomatic") %>% length)/n
 
-correlated <- rep(NA,n)
-for(i in 1:n){
-  tmp_1 <- sort(sample(serial_sample, 10000,replace = T))
-  tmp_2 <- sort(incubation_sample)[1]
-  correlated[i] <- if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
+###sampling
+finding.pre.sym.prob <- function(x){
+  res = rep(NA,length(x))
+  for (i in 1:length(x)){
+    y = round(x[i],1)
+    res[i] = filter(incubation_freq, value == y)$revcum
+  }
+  return(res)
 }
-(which(correlated == "pre-symptomatic") %>% length)/n
+  
+n = 10000
+data.frame(sample = 1:n) %>%
+  mutate(serial.interval = sample(serial_sample,n, replace=T)) %>%
+  mutate(prob.presym = finding.pre.sym.prob(serial.interval))
+
+
