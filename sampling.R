@@ -55,7 +55,8 @@ finding.pre.sym.prob <- function(x){
   res = rep(NA,length(x))
   for (i in 1:length(x)){
     y = round(x[i],1)
-    res[i] = filter(incubation_freq, value == y)$revcum
+    if (dim(filter(incubation_freq, value == y))[1] == 0 ){res[i]=0
+      }else{res[i] = filter(incubation_freq, value == y)$revcum}
   }
   return(res)
 }
@@ -63,6 +64,11 @@ finding.pre.sym.prob <- function(x){
 n = 10000
 data.frame(sample = 1:n) %>%
   mutate(serial.interval = sample(serial_sample,n, replace=T)) %>%
-  mutate(prob.presym = finding.pre.sym.prob(serial.interval))
+  mutate(prob.presym = finding.pre.sym.prob(serial.interval)) %>% 
+  summarise(median = median(prob.presym),
+            mean = mean(prob.presym),
+            lo = quantile(prob.presym, probs=.025),
+            hi = quantile(prob.presym, probs=.975)
+            )
 
 
