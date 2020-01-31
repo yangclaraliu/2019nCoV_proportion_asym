@@ -58,10 +58,13 @@ for(i in 1:n){
 quantile(random, c(0.025, 0.975))
 
 correlated <- rep(NA,n)
+anticorrelated <- rep(NA,n)
 for(i in 1:n){
-  tmp_1 <- sort(sample(serial_sample, 10000,replace = T))
+  tmp_1 <- sort(sample(serial_sample, length(incubation_sample),replace = F))
   #tmp_2 <- sort(incubation_sample)[1]
   correlated[i] <- length(which(incubation_sample > tmp_1))/length(incubation_sample)
+  anticorrelated[i] <- length(which(incubation_sample > rev(tmp_1)))/length(incubation_sample)
     #if_else(tmp_2 > tmp_1, "pre-symptomatic","symptomatic")
 }
-(which(correlated == "pre-symptomatic") %>% length)/n
+quantile(correlated, c(0.025, 0.975))
+quantile(anticorrelated, c(0.025, 0.975))
