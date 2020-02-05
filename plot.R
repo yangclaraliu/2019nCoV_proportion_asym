@@ -109,7 +109,7 @@ stacked %>%
   ## reverse order in legend, so that it's in logical time order (pre-symptomatic first)
   guides(fill = guide_legend(reverse = TRUE),
          colour = guide_legend(reverse = TRUE)) +
-  xlab("Serial Interval (days)") + ylab("Relative Frequency") +
+  xlab("Serial Interval (days)") + ylab("Probability density") +
   theme(legend.position = "top",
         legend.title = element_blank()) +
   scale_y_continuous(breaks = c(0, 50, 100),
