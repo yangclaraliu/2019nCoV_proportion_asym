@@ -1,6 +1,7 @@
 library(tidyverse)
-setwd("C:/Users/eideyliu/Desktop")
+#setwd("C:/Users/eideyliu/Desktop")
 ### generate incubation sample
+setwd("~/GitHub/2019nCoV_proportion_asym")
 incubation <- read.csv("nCoV_Incubation.csv")
 incubation <- rbind(incubation,c(0,0)) %>% arrange(x) %>% mutate(x = round(x,1))
 
@@ -52,7 +53,7 @@ n = 10000
 #random <- rep(NA,n)
 
 ### Stacked barplot (but really it's segment plot)
-expand.grid(seq(0,21,by=0.1),c("Symptomatic", "Pre-symptomatic")) %>% 
+expand.grid(seq(0,21,by=0.1),c("After Symptoms Onset", "Pre-symptomatic")) %>% 
   as_tibble %>% 
   setNames(c("duration","status")) %>% 
   arrange(duration) %>% 
@@ -87,6 +88,9 @@ tmp[[2]]$height <- lo$y
 tmp %>% bind_rows() -> stacked
 
 stacked %>%   
+  # mutate(status = factor(status,
+  #                        levels = c("Pre-symptomatic",
+  #                                   "After Symptoms Onset"))) %>% 
   ggplot(.)+
   #geom_line(size = 2)+
   geom_area(position = "stack",
@@ -106,8 +110,10 @@ stacked %>%
   cowplot::theme_cowplot() +
   scale_fill_manual(values = c("#00b159","#d11141"))+
   scale_color_manual(values = c("#00b159","#d11141"))+
-  xlab("Serial Interval (days)") + ylab("Relative Frequency") +
+  xlab("Serial Interval (days)") + ylab("Probability Density") +
   theme(legend.position = "top",
         legend.title = element_blank()) +
   scale_y_continuous(breaks = c(0, 50, 100),
-                     labels = c(0, 50, 100)/10000)
+                     labels = c(0, 50, 100)/10000) +
+  guides(colour = guide_legend(reverse = T),
+         fill = guide_legend(reverse = T))
