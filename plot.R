@@ -52,7 +52,7 @@ n = 10000
 #random <- rep(NA,n)
 
 ### Stacked barplot (but really it's segment plot)
-expand.grid(seq(0,21,by=0.1),c("Symptomatic", "Pre-symptomatic")) %>% 
+expand.grid(seq(0,21,by=0.1),c("After symptom onset", "Pre-symptomatic")) %>% 
   as_tibble %>% 
   setNames(c("duration","status")) %>% 
   arrange(duration) %>% 
@@ -106,8 +106,14 @@ stacked %>%
   cowplot::theme_cowplot() +
   scale_fill_manual(values = c("#00b159","#d11141"))+
   scale_color_manual(values = c("#00b159","#d11141"))+
-  xlab("Serial Interval (days)") + ylab("Relative Frequency") +
+  ## reverse order in legend, so that it's in logical time order (pre-symptomatic first)
+  guides(fill = guide_legend(reverse = TRUE),
+         colour = guide_legend(reverse = TRUE)) +
+  xlab("Serial Interval (days)") + ylab("Probability density") +
   theme(legend.position = "top",
         legend.title = element_blank()) +
   scale_y_continuous(breaks = c(0, 50, 100),
-                     labels = c(0, 50, 100)/10000)
+                     labels = c(0, 50, 100)/10000) -> p
+
+## save as PDF in publication-ready size
+cowplot::save_plot("asym.pdf", p)
