@@ -1,3 +1,4 @@
+  round(., 1) %>% 
 # Load Packages
 library(tidyverse)
 library(googlesheets4)
