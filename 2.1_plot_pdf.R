@@ -56,7 +56,9 @@ rbind(part_1, part_2, part_3, part_4, part_5, part_6) %>%
   scale_linetype_manual(values = c("dashed", "solid"),
                         labels = c("w/ Intervention",
                                    "w/o Intervention")) + 
-  guides(linetype = guide_legend(override.aes = list(size = 0.5)))
+  guides(linetype = guide_legend(override.aes = list(size = 0.5))) +
+  ylim(0, 0.25)
+
   # geom_vline(xintercept = 7.5, 
   #            linetype = 2,
   #            color = "#56B4E9",

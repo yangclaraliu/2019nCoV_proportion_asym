@@ -1,16 +1,16 @@
-library(ggpubr)
 
-#rm(list=setdiff(ls(), "res"))
+library(tidyverse)
+library(ggpubr)
 rm(list=ls())
+
 setwd("~/GitHub/2019nCoV_proportion_asym")
 n <- 10000
 source("0_Import.R")
-SI_tmp <- serial_sample_Nishiura#serial_sample_Bi$late #serial_sample_Bi$all
-IP_tmp <- incubation_sample_Bi
+SI_tmp <- serial_sample_Bi$Li #serial_sample_Bi$late #serial_sample_Bi$all
+IP_tmp <- incubation_sample_Li
   #incubation_sample_Bi
 source("1_sample.R")
 source("2_plot.R")
-source("3_corr.R")
 
 # mean(SI_tmp)
 # mean(IP_tmp)
@@ -32,7 +32,6 @@ source("3_corr.R")
 #           labels = c("A",
 #                      "B")) -> p
 # 
-# 
 # annotate_figure(p,
 #                 left = "Probability Density",
 #                 bottom = "Serial Interval (Days)")
@@ -44,3 +43,4 @@ source("3_corr.R")
 #        height = 5,
 #        dpi = 800)
 
+source("3_corr.R")

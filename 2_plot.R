@@ -22,8 +22,8 @@ stacked %>%
   theme(legend.position = "top",
         legend.title = element_blank(),
         plot.margin = margin(0.1,0.1,0.1,0.1,"cm")) +
-  scale_y_continuous(breaks = c(0, 50, 100, 150, 200),
-                     labels = c("0.00", "0.05", "0.10", "0.15", "0.20"),
+  scale_y_continuous(breaks = c(0, 50, 100, 150, 200, 250),
+                     labels = c("0.00", "0.05", "0.10", "0.15", "0.20", 0.25),
                      limits = c(0,250)) +
   xlim(0, 21)-> p
 p
