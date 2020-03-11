@@ -1,0 +1,78 @@
+no,parameter,metric,source,value,first author last name,Notes,Country
+1,serial,mean,https://www.nejm.org/doi/full/10.1056/NEJMoa2001316,7.5,Li,,China
+1,serial,sample size,https://www.nejm.org/doi/full/10.1056/NEJMoa2001316,5 pairs,Li,,China
+1,serial,95% CI,https://www.nejm.org/doi/full/10.1056/NEJMoa2001316,5.3-19,Li,,China
+2,incubation,mean,https://www.nejm.org/doi/full/10.1056/NEJMoa2001316,5.2,Li,,China
+2,incubation,sample size,https://www.nejm.org/doi/full/10.1056/NEJMoa2001316,10,Li,,China
+2,incubation,95% CI,https://www.nejm.org/doi/full/10.1056/NEJMoa2001316,4.1-7,Li,,China
+3,serial,mean,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,6.3,Bi,"Gamma Distribution
+Parameter 1 = 2.29(1.77, 3.34)
+Parameter 2 = 0.36(0.26, 0.57)
+5% = 1.32 (0.92, 1.87)
+50% = 5.41 (4.43, 6.49)
+95% = 14.3 (11.12, 17.57)",China
+3,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,48 pairs,Bi,"Gamma Distribution
+Parameter 1 = 2.29(1.77, 3.34)
+Parameter 2 = 0.36(0.26, 0.57)
+5% = 1.32 (0.92, 1.87)
+50% = 5.41 (4.43, 6.49)
+95% = 14.3 (11.12, 17.57)",China
+3,serial,95% CI,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,5.2-7.6,Bi,"Gamma Distribution
+Parameter 1 = 2.29(1.77, 3.34)
+Parameter 2 = 0.36(0.26, 0.57)
+5% = 1.32 (0.92, 1.87)
+50% = 5.41 (4.43, 6.49)
+95% = 14.3 (11.12, 17.57)",China
+4,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,NA,Bi,Time to Isolation = 0-2 days,China
+4,serial,Mean,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,3.6,Bi,Time to Isolation = 0-2 days,China
+4,serial,95% CI,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,3-4.2,Bi,Time to Isolation = 0-2 days,China
+5,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,NA,Bi,Time to Isolation = 3-5 days,China
+5,serial,Mean,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,8.1,Bi,Time to Isolation = 3-5 days,China
+5,serial,95% CI,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,5.3-11,Bi,Time to Isolation = 3-5 days,China
+6,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,NA,Bi,Time to Isolation = 6 or more days,China
+6,serial,Mean,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,8,Bi,Time to Isolation = 6 or more days,China
+6,serial,95% CI,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,6.2-9.7,Bi,Time to Isolation = 6 or more days,China
+7,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,28 pairs,Nishiura,"Whole data set, lognormal",Japan
+7,serial,median,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,4,Nishiura,"Whole data set, lognormal",Japan
+7,serial,95% CrI,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,3.1-4.9,Nishiura,"Whole data set, lognormal",Japan
+8,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,28 pairs,Nishiura,"Whole data set, lognormal",Japan
+8,serial,mean,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,4.7,Nishiura,"Whole data set, lognormal",Japan
+8,serial,95% CrI,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,3.7-6,Nishiura,"Whole data set, lognormal",Japan
+9,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,28 pairs,Nishiura,"Whole data set, lognormal",Japan
+9,serial,SD,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,2.9,Nishiura,"Whole data set, lognormal",Japan
+9,serial,95% CrI,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,1.9-4.9,Nishiura,"Whole data set, lognormal",Japan
+10,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,18 pairs,Nishiura,"High certainty, Weibull",Japan
+10,serial,median,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,4.6,Nishiura,"High certainty, Weibull",Japan
+10,serial,95% CrI,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,3.5-5.9,Nishiura,"High certainty, Weibull",Japan
+11,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,18 pairs,Nishiura,"High certainty, Weibull",Japan
+11,serial,mean,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,4.8,Nishiura,"High certainty, Weibull",Japan
+11,serial,95% CrI,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,3.8-6.1,Nishiura,"High certainty, Weibull",Japan
+11,serial,sample size,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,18 pairs,Nishiura,"High certainty, Weibull",Japan
+12,serial,SD,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,2.3,Nishiura,"High certainty, Weibull",Japan
+12,serial,95% CrI,https://www.medrxiv.org/content/10.1101/2020.02.03.20019497v2.full.pdf,1.6-3.5,Nishiura,"High certainty, Weibull",Japan
+13,incubation,sample size,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,NA,Bi,"Lognormal
+Parameter 1 = 1.57 (1.44, 1.69)
+Parameter 2 = 0.65(0.56, 0.73)
+5% = 1.64 (1.33, 2.04)
+50% = 4.8 (4.22, 5.44)
+95% = 14.04(12.19, 15.90)",China
+13,incubation,mean,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,5.95,Bi,"Lognormal
+Parameter 1 = 1.57 (1.44, 1.69)
+Parameter 2 = 0.65(0.56, 0.73)
+5% = 1.64 (1.33, 2.04)
+50% = 4.8 (4.22, 5.44)
+95% = 14.04(12.19, 15.90)",China
+13,incubation,95% CI,https://www.medrxiv.org/content/10.1101/2020.03.03.20028423v1.full.pdf,4.94-7.11,Bi,"Lognormal
+Parameter 1 = 1.57 (1.44, 1.69)
+Parameter 2 = 0.65(0.56, 0.73)
+5% = 1.64 (1.33, 2.04)
+50% = 4.8 (4.22, 5.44)
+95% = 14.04(12.19, 15.90)",China
+14,incubation,sample size,https://www.e-epih.org/upload/pdf/epih-e2020007-AOP.pdf,22,Ki,"Although not explicitly included in the policy, the symptom onset to quarantine time in this sample is 4 days. This seems short. Maybe closer to ""interfered"" condition.",Korea
+14,incubation,mean,https://www.e-epih.org/upload/pdf/epih-e2020007-AOP.pdf,3.6,Ki,"Although not explicitly included in the policy, the symptom onset to quarantine time in this sample is 4 days. This seems short. Maybe closer to ""interfered"" condition.",Korea
+14,incubation,range,https://www.e-epih.org/upload/pdf/epih-e2020007-AOP.pdf,1-9,Ki,"Although not explicitly included in the policy, the symptom onset to quarantine time in this sample is 4 days. This seems short. Maybe closer to ""interfered"" condition.",Korea
+14,incubation,median,https://www.e-epih.org/upload/pdf/epih-e2020007-AOP.pdf,4,Ki,"Although not explicitly included in the policy, the symptom onset to quarantine time in this sample is 4 days. This seems short. Maybe closer to ""interfered"" condition.",Korea
+15,,sample size,https://www.e-epih.org/upload/pdf/epih-e2020007-AOP.pdf,24,Ki,"Although not explicitly included in the policy, the symptom onset to quarantine time in this sample is 4 days. This seems short. Maybe closer to ""interfered"" condition.",Korea
+15,,mean,https://www.e-epih.org/upload/pdf/epih-e2020007-AOP.pdf,4.6,Ki,"Although not explicitly included in the policy, the symptom onset to quarantine time in this sample is 4 days. This seems short. Maybe closer to ""interfered"" condition.",Korea
+15,,range,https://www.e-epih.org/upload/pdf/epih-e2020007-AOP.pdf,3-9,Ki,"Although not explicitly included in the policy, the symptom onset to quarantine time in this sample is 4 days. This seems short. Maybe closer to ""interfered"" condition.",Korea
+15,,median,https://www.e-epih.org/upload/pdf/epih-e2020007-AOP.pdf,4,Ki,"Although not explicitly included in the policy, the symptom onset to quarantine time in this sample is 4 days. This seems short. Maybe closer to ""interfered"" condition.",Korea

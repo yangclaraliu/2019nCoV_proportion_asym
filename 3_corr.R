@@ -17,10 +17,10 @@ for(j in 1:m){
   }
   random[j] <- (which(point == "pre-symptomatic") %>% length)/length(point)
 }
+
 hist(random)
 print(mean(random))
 random_diff_perc <- list()
-
 for(j in 1:1000){
   seq(0,10, by = 0.1) %>% 
     enframe %>% 
@@ -49,18 +49,18 @@ random_diff_perc %>%
        y = "Proportion Preventable through Case Isolation")+
   theme_cowplot()
 
-ggsave("preventable_proportion_Li.png",
-       width = 6,
-       height = 6,
-       dpi = 800)
+# ggsave("preventable_proportion_Li.png",
+#        width = 6,
+#        height = 6,
+#        dpi = 800)
   
 random_diff_perc %>% 
   bind_rows(.) %>% 
   t %>% 
   as_tibble %>% 
-  dplyr::select(V1, V11, V21, V31) %>% 
+  dplyr::select(V1, V11, V21, V31, V71) %>% 
   colMeans() %>% 
-  setNames(paste0("day",c(0:3)))
+  setNames(paste0("day",c(0:3,7)))
 
 library(cowplot)
 random_diff_perc %>% 

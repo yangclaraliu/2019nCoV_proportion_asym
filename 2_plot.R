@@ -16,8 +16,8 @@ stacked %>%
   #            color = "white",
   #            size = 2)+
   cowplot::theme_cowplot() +
-  scale_fill_manual(values = c("#0072B2","#D55E00")) +
-  scale_color_manual(values = c("#0072B2","#D55E00")) +
+  scale_fill_manual(values = c("#56B4E9","#D55E00")) +
+  scale_color_manual(values = c("#56B4E9","#D55E00")) +
   xlab(" ") + ylab(" ") +
   theme(legend.position = "top",
         legend.title = element_blank(),
