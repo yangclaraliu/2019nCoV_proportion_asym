@@ -1,3 +1,8 @@
+This project only analyses secondary data that has already been compiled by other studies. 
+- Li, Qun, et al. "Early transmission dynamics in Wuhan, China, of novel coronavirus–infected pneumonia." New England Journal of Medicine (2020).
+- Nishiura, Hiroshi, Natalie M. Linton, and Andrei R. Akhmetzhanov. "Serial interval of novel coronavirus (COVID-19) infections." International Journal of Infectious Diseases (2020).
+- Bi, Qifang, et al. "Epidemiology and Transmission of COVID-19 in Shenzhen China: Analysis of 391 cases and 1,286 of their close contacts". MedRXiv (2020).
+
 # 2019nCoV_proportion_asym
 ## Code files
 - 0_import.R
