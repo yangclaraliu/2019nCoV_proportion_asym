@@ -1,4 +1,5 @@
 # The contribution of pre-symptomatic infection to the transmission dynamics of COVID-2019
+@author: Yang Liu, CMMID 2019-nCoV Working Group, Sebastian Funk, Stefan Flasche
 
 <a href="https://zenodo.org/badge/latestdoi/237401439"><img src="https://zenodo.org/badge/237401439.svg" alt="DOI"></a>
 
