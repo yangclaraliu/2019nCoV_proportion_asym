@@ -1,3 +1,5 @@
+<a href="https://zenodo.org/badge/latestdoi/237401439"><img src="https://zenodo.org/badge/237401439.svg" alt="DOI"></a>
+
 This project only analyses secondary data included in:
 - Li, Qun, et al. "Early transmission dynamics in Wuhan, China, of novel coronavirus–infected pneumonia." New England Journal of Medicine (2020).
 - Nishiura, Hiroshi, Natalie M. Linton, and Andrei R. Akhmetzhanov. "Serial interval of novel coronavirus (COVID-19) infections." International Journal of Infectious Diseases (2020).
@@ -28,5 +30,3 @@ This project only analyses secondary data included in:
 
 ## Other documents
 - [WOR] Presymptomatics-Supplemental Information.pdf
-
-<a href="https://zenodo.org/badge/latestdoi/237401439"><img src="https://zenodo.org/badge/237401439.svg" alt="DOI"></a>
