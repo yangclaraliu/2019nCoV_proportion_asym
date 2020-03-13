@@ -28,3 +28,5 @@ This project only analyses secondary data included in:
 
 ## Other documents
 - [WOR] Presymptomatics-Supplemental Information.pdf
+
+<a href="https://zenodo.org/badge/latestdoi/237401439"><img src="https://zenodo.org/badge/237401439.svg" alt="DOI"></a>
