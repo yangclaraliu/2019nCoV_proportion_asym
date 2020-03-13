@@ -1,3 +1,5 @@
+# The contribution of pre-symptomatic infection to the transmission dynamics of COVID-2019
+
 <a href="https://zenodo.org/badge/latestdoi/237401439"><img src="https://zenodo.org/badge/237401439.svg" alt="DOI"></a>
 
 This project only analyses secondary data included in:
@@ -5,7 +7,6 @@ This project only analyses secondary data included in:
 - Nishiura, Hiroshi, Natalie M. Linton, and Andrei R. Akhmetzhanov. "Serial interval of novel coronavirus (COVID-19) infections." International Journal of Infectious Diseases (2020).
 - Bi, Qifang, et al. "Epidemiology and Transmission of COVID-19 in Shenzhen China: Analysis of 391 cases and 1,286 of their close contacts". MedRXiv (2020).
 
-# 2019nCoV_proportion_asym
 ## Code files
 - 0_import.R
 - 1_sample.R
